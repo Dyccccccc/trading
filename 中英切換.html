@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="style.css" rel=stylesheet type="text/css" >
+
+</head>
+<body>
+<h1>The Element Object</h1>
+<h2>The getElementsByClassName() Method</h2>
+
+<div id="myDIV1" >
+  <p class="child1" style="display:inline-block">我是中文</p>
+  <p class="child1" style="display:inline-block">我是中文</p>
+  <p class="child1" style="display:inline-block">我是中文</p>
+</div>
+
+<div id="myDIV2" >
+  <p class="child2" style="display:none">I am a Englesh.</p>
+  <p class="child2" style="display:none">I am a Englesh.</p>
+  <p class="child2" style="display:none">I am a Englesh.</p>
+  <p>I am a paragraph <span class="child">with a span element</span>.</p>
+</div>
+
+<p>Click "Change" to change the color of all elements with class="child":</p>
+
+<button onclick="myFunction()">Change</button>
+
+<script>
+var a = 0;//控制中英文切換的開關
+function myFunction() {
+//const element = document.getElementById("myDIV1");
+var CHN = document.getElementsByClassName("child1"); //取得ClassName因為ClassName是複數所以要以字串的方式呼叫
+var ENG = document.getElementsByClassName("child2"); //取得ClassName因為ClassName是複數所以要以字串的方式呼叫
+//CHN.length代表 擁有child1這個classname的數量
+
+if(a==0){
+
+for (let i = 0; i < CHN.length; i++) 
+	{
+  	CHN[i].style.display = "none";
+	}
+	
+for (let i = 0; i < ENG.length; i++) 
+	{
+  	ENG[i].style.display = "inline-block";	
+	}
+a=a+1;
+	}
+else{
+
+for (let i = 0; i < CHN.length; i++) 
+	{
+  	CHN[i].style.display = "inline-block";
+	}
+	
+for (let i = 0; i < ENG.length; i++) 
+	{
+  	ENG[i].style.display = "none";	
+	}
+a=0;
+	}
+  }
+
+</script>
+</body>
+
+</html>
+

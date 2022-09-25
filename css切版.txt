@@ -1,0 +1,19 @@
+display:flex  變成橫向
+
+justify-content:flex start 水平靠左
+justify-content:flex end 水平靠右
+
+align-items: flex end 垂直靠下
+align-items: center 垂直靠中
+
+justify-content:center;align-items:center 完美置中
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+
+
+
+
+
+
+
